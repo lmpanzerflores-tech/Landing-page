@@ -315,3 +315,17 @@ function showNextTestimonial() {
 }
 
 setInterval(showNextTestimonial, 3000);
+function toggleFaq(button) {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector('i');
+
+    // Alterna a classe hidden
+    content.classList.toggle('hidden');
+
+    // Gira o ícone
+    if (content.classList.contains('hidden')) {
+        icon.style.transform = 'rotate(0deg)';
+    } else {
+        icon.style.transform = 'rotate(180deg)';
+    }
+}
