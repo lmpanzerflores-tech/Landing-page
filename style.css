@@ -4,9 +4,9 @@
 
 /* Variáveis CSS para facilitar manutenção */
 :root {
-    --color-primary: #2563eb;
+    --color-primary: #fff237;
     /* Azul principal */
-    --color-primary-dark: #1d4ed8;
+    --color-primary-dark: #ccd81d;
     /* Azul hover */
     --color-secondary: #f3f4f6;
     /* Cinza claro */
@@ -215,7 +215,7 @@ html {
 
 /* Gradient text para destaques */
 .text-gradient {
-    background: linear-gradient(135deg, var(--color-primary) 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, #f6f33b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
