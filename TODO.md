@@ -1,1 +1,0 @@
-# TODO: Implementar página de Termos de Serviço\n\n- [ ] 1. Criar termos.html (nova página standalone)\n- [ ] 2. Editar footer em index.html (atualizar link Termos de uso)\n- [ ] 3. Editar footer em cursos.html (atualizar link Termos de uso)\n- [ ] 4. Testar navegação e responsividade\n- [ ] 5. Finalizar tarefa\n
