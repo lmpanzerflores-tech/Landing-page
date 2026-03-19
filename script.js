@@ -266,6 +266,233 @@ function showNotification(message) {
 // UTILITÁRIOS EXTRAS
 // ========================================
 
+// ========================================
+/*
+ * CARROSSEL DE DEPOIMENTOS - HOME PAGE
+ */
+let depoIndex = 0;
+const depoCards = document.querySelectorAll('.depo-card');
+const depoDots = document.querySelectorAll('.depo-dot');
+const prevBtn = document.getElementById('prev-depo');
+const nextBtn = document.getElementById('next-depo');
+
+function initDepoimentos() {
+    if (!depoCards.length) return;
+    
+    // Auto play
+    setInterval(nextDepo, 5000);
+    
+    // Event listeners
+    if (prevBtn) prevBtn.onclick = prevDepo;
+    if (nextBtn) nextBtn.onclick = nextDepo;
+    depoDots.forEach((dot, index) => {
+        dot.onclick = () => goToDepo(index);
+    });
+}
+
+function nextDepo() {
+    depoIndex = (depoIndex + 1) % depoCards.length;
+    updateDepo();
+}
+
+function prevDepo() {
+    depoIndex = (depoIndex - 1 + depoCards.length) % depoCards.length;
+    updateDepo();
+}
+
+function goToDepo(index) {
+    depoIndex = index;
+    updateDepo();
+}
+
+function updateDepo() {
+    depoCards.forEach((card, i) => {
+        card.classList.toggle('active', i === depoIndex);
+    });
+    depoDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === depoIndex);
+    });
+}
+
+// ========================================
+/*
+ * FUNCIONALIDADES DA PÁGINA DE CURSOS
+ * Filtro por categoria, busca, paginação
+ */
+let cursosFiltrados = [];
+let categoriaSelecionada = '';
+let termoBusca = '';
+let paginaAtual = 1;
+const CURSOS_POR_PAGINA = 12;
+
+// Inicializar página de cursos
+function initCursosPage() {
+    if (document.querySelector('#gridCursos')) {
+        carregarFiltros();
+        filtrarCursos('');
+        setupEventListenersCursos();
+    }
+}
+
+// Criar botões de filtro dinamicamente
+function carregarFiltros() {
+    const container = document.getElementById('filtrosCategorias');
+    if (!container) return;
+
+    categorias.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = `filter-btn bg-white border-2 border-gray-200 text-gray-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-50 hover:border-yellow-400 hover:shadow-md transition-all text-sm whitespace-nowrap`;
+        btn.dataset.categoria = cat;
+        btn.textContent = cat;
+        btn.onclick = () => filtrarCursos(cat);
+        container.appendChild(btn);
+    });
+}
+
+// Event listeners para cursos
+function setupEventListenersCursos() {
+    // Busca
+    document.getElementById('buscaCursos').addEventListener('input', function(e) {
+        termoBusca = e.target.value.toLowerCase().trim();
+        paginaAtual = 1;
+        filtrarCursos(categoriaSelecionada);
+    });
+
+    // Paginação
+    document.getElementById('btnProxima').onclick = () => {
+        if (paginaAtual < Math.ceil(cursosFiltrados.length / CURSOS_POR_PAGINA)) {
+            paginaAtual++;
+            renderizarCursos();
+        }
+    };
+
+    document.getElementById('btnAnterior').onclick = () => {
+        if (paginaAtual > 1) {
+            paginaAtual--;
+            renderizarCursos();
+        }
+    };
+
+    // Limpar busca
+    document.querySelector('[onclick="limparBusca()"]').onclick = limparBusca;
+}
+
+// Filtrar e renderizar cursos
+function filtrarCursos(categoria) {
+    categoriaSelecionada = categoria;
+    paginaAtual = 1;
+
+    // Atualizar botões ativos
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('bg-yellow-100', 'border-yellow-400', 'text-yellow-700', 'font-bold', 'shadow-md');
+        if (btn.dataset.categoria === categoria || (categoria === '' && btn.dataset.categoria === '')) {
+            btn.classList.add('bg-yellow-100', 'border-yellow-400', 'text-yellow-700', 'font-bold', 'shadow-md');
+        }
+    });
+
+    // Filtrar cursos
+    cursosFiltrados = cursosData.filter(curso => {
+        const matchCategoria = categoria === '' || curso.categoria === categoria;
+        const matchBusca = termoBusca === '' || 
+                          curso.titulo.toLowerCase().includes(termoBusca) || 
+                          curso.descricao.toLowerCase().includes(termoBusca);
+        return matchCategoria && matchBusca;
+    });
+
+    // Atualizar UI
+    document.getElementById('totalCursos').textContent = cursosFiltrados.length;
+    document.getElementById('totalPaginas').textContent = Math.ceil(cursosFiltrados.length / CURSOS_POR_PAGINA);
+    
+    renderizarCursos();
+    atualizarPagButtons();
+}
+
+// Renderizar cursos da página atual
+function renderizarCursos() {
+    const grid = document.getElementById('gridCursos');
+    const inicio = (paginaAtual - 1) * CURSOS_POR_PAGINA;
+    const fim = inicio + CURSOS_POR_PAGINA;
+    const cursosPagina = cursosFiltrados.slice(inicio, fim);
+
+    // Mostrar loading
+    document.getElementById('loading').classList.remove('hidden');
+    document.getElementById('semResultados').classList.add('hidden');
+    grid.innerHTML = '';
+
+    setTimeout(() => {
+        document.getElementById('loading').classList.add('hidden');
+
+        if (cursosPagina.length === 0) {
+            document.getElementById('semResultados').classList.remove('hidden');
+            return;
+        }
+
+        cursosPagina.forEach(curso => {
+            const card = criarCardCurso(curso);
+            grid.appendChild(card);
+        });
+
+        // Re-inicializar icons
+        lucide.createIcons();
+    }, 400);
+}
+
+// Criar card de curso
+function criarCardCurso(curso) {
+    const card = document.createElement('div');
+    card.className = 'course-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group cursor-pointer h-full flex flex-col';
+    
+    const badgeClass = {
+        'Administração e Negócios': 'bg-yellow-100 text-yellow-700',
+        'Direito': 'bg-red-100 text-red-700',
+        'Auto Ajuda e Desenvolvimento Humano': 'bg-blue-100 text-blue-700'
+    }[curso.categoria] || 'bg-gray-100 text-gray-700';
+
+    card.innerHTML = `
+        <div class="h-48 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+            <img src="${curso.img}" alt="${curso.titulo}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold ${badgeClass} shadow-sm">${curso.categoria}</span>
+            </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">${curso.titulo}</h3>
+            <p class="text-gray-600 text-sm mb-6 line-clamp-3 flex-grow">${curso.descricao}</p>
+            <a href="${curso.url}" class="text-yellow-600 font-semibold text-sm flex items-center gap-2 hover:gap-3 group-hover:translate-x-2 transition-all mt-auto">
+                Ver detalhes
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+    `;
+
+    return card;
+}
+
+// Atualizar botões de paginação
+function atualizarPagButtons() {
+    const totalPaginas = Math.ceil(cursosFiltrados.length / CURSOS_POR_PAGINA);
+    const btnAnterior = document.getElementById('btnAnterior');
+    const btnProxima = document.getElementById('btnProxima');
+    const paginaAtualEl = document.getElementById('paginaAtual');
+
+    paginaAtualEl.textContent = paginaAtual;
+    
+    btnAnterior.disabled = paginaAtual <= 1;
+    btnProxima.disabled = paginaAtual >= totalPaginas;
+}
+
+// Limpar busca
+function limparBusca() {
+    document.getElementById('buscaCursos').value = '';
+    termoBusca = '';
+    paginaAtual = 1;
+    filtrarCursos(categoriaSelecionada);
+}
+
+// ========================================
+
+
+
 // Lazy loading para imagens (melhoria de performance)
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries) => {

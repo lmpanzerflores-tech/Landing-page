@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso e Política - Super Conhecimento</title>
+
+    <!-- SEO & Meta -->
+    <meta name="description" content="Termos de uso, política de privacidade e condições da plataforma Super Conhecimento. Leia antes de usar nossos cursos certificados.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Print Styles -->
+    <style>
+        @media print {
+            header, footer, .no-print { display: none !important; }
+            body { font-size: 12pt; }
+            main { max-width: none; }
+            .print-section { page-break-inside: avoid; margin-bottom: 2cm; }
+            h2 { page-break-after: avoid; }
+        }
+    </style>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="font-['Inter'] antialiased text-gray-800 bg-gradient-to-b from-white to-gray-50 min-h-screen">
+
+    <!-- HEADER COERENTE -->
+    <header class="fixed w-full top-0 bg-white/95 backdrop-blur-sm shadow-lg z-50 transition-all duration-300" id="header" data-pagina="termos">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="img/logo-super.png" alt="Super Conhecimento" class="h-12 w-auto transition-transform group-hover:scale-110">
+                    <span class="font-black text-2xl bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent hidden lg:inline">Super Conhecimento</span>
+                </a>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden lg:flex items-center gap-12">
+                    <a href="index.html#beneficios" class="nav-link text-gray-700 hover:text-yellow-600 font-semibold py-3 px-4 rounded-lg transition-all relative">Benefícios</a>
+                    <a href="index.html#cursos" class="nav-link text-gray-700 hover:text-yellow-600 font-semibold py-3 px-4 rounded-lg transition-all relative">Cursos</a>
+                    <a href="cursos.html" class="nav-link text-gray-700 hover:text-yellow-600 font-semibold py-3 px-4 rounded-lg transition-all relative">Catálogo Completo</a>
+                    <a href="index.html#oferta" class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-3 rounded-xl font-bold hover:from-yellow-500 hover:to-orange-600 shadow-lg hover:shadow-yellow-400/50 transition-all">Começar Agora</a>
+                </nav>
+
+                <!-- Mobile Menu -->
+                <button class="lg:hidden p-3 text-gray-700 hover:text-yellow-600 hover:bg-yellow-50 rounded-xl transition-all" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden bg-white/95 backdrop-blur border-t border-gray-200 shadow-xl" id="mobile-menu">
+                <div class="flex flex-col p-6 space-y-4">
+                    <a href="index.html#beneficios" class="text-gray-700 hover:text-yellow-600 py-3 px-4 font-semibold rounded-xl border-b-2 border-transparent hover:border-yellow-600 transition-all">Benefícios</a>
+                    <a href="index.html#cursos" class="text-gray-700 hover:text-yellow-600 py-3 px-4 font-semibold rounded-xl border-b-2 border-transparent hover:border-yellow-600 transition-all">Cursos</a>
+                    <a href="cursos.html" class="text-yellow-600 font-bold py-3 px-4 border-b-2 border-yellow-600 rounded-xl font-semibold">Catálogo Completo</a>
+                    <a href="index.html#oferta" class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-2xl font-bold mx-auto mt-4 hover:from-yellow-500 hover:to-orange-600 shadow-xl hover:shadow-yellow-400/50 transition-all">Começar Agora</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO CONTEXTUAL -->
+    <section class="pt-32 pb-20 lg:pt-44 lg:pb-32 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-25 animate-blob animation-delay-2000"></div>
+        <div class="absolute top-32 right-0 w-80 h-80 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="inline-flex items-center gap-3 bg-white shadow-2xl px-8 py-6 rounded-3xl border border-gray-200 backdrop-blur-lg mb-12 max-w-md mx-auto">
+                    <i data-lucide="shield-check" class="w-12 h-12 text-blue-600"></i>
+                    <div>
+                        <h1 class="text-4xl lg:text-5xl font-black text-gray-900 mb-2 leading-tight">Termos de Uso</h1>
+                        <p class="text-xl text-gray-600 font-semibold">Super Conhecimento - Plataforma de Cursos</p>
+                    </div>
+                </div>
+                
+                <div class="max-w-3xl mx-auto mb-16">
+                    <p class="text-2xl text-gray-700 mb-8 leading-relaxed">
+                        Leia atentamente antes de usar nossa plataforma. Estes termos protegem você e garantem um ambiente educacional seguro.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                        <a href="index.html" class="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:shadow-yellow-500/50 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
+                            <i data-lucide="home" class="w-6 h-6"></i>
+                            Voltar ao Site Principal
+                        </a>
+                        <button onclick="window.print()" class="inline-flex items-center gap-3 bg-white text-gray-900 border-2 border-gray-300 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-gray-50 hover:shadow-xl shadow-lg transition-all hover:-translate-y-1 print:no-print">
+                            <i data-lucide="printer" class="w-6 h-6"></i>
+                            Imprimir/Salvar PDF
+                        </button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mb-16">
+                        <div class="p-6 bg-blue-50 rounded-2xl border-2 border-blue-200">
+                            <div class="text-3xl font-black text-blue-700 mb-2">Atualizado</div>
+                            <div class="text-xl font-bold text-blue-600">Janeiro 2025</div>
+                        </div>
+                        <div class="p-6 bg-green-50 rounded-2xl border-2 border-green-200">
+                            <div class="text-3xl font-black text-green-700 mb-2">Vigência</div>
+                            <div class="text-xl font-bold text-green-600">12 Meses</div>
+                        </div>
+                        <div class="p-6 bg-purple-50 rounded-2xl border-2 border-purple-200">
+                            <div class="text-3xl font-black text-purple-700 mb-2">Proteção</div>
+                            <div class="text-xl font-bold text-purple-600">LGPD Compliant</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOC INTERATIVO -->
+    <div class="sticky top-32 lg:top-28 z-30 lg:w-80 lg:h-[calc(100vh-8rem)] lg:overflow-y-auto hidden lg:block lg:float-right lg:ml-12 mb-16 lg:mb-0">
+        <div class="bg-white/80 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-white/50 sticky top-4">
+            <h3 class="font-black text-2xl text-gray-900 mb-8 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Índice</h3>
+            <nav id="toc-nav" class="space-y-4 text-lg">
+                <!-- Gerado dinamicamente pelo JS -->
+            </nav>
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <a href="index.html#oferta" class="inline-flex items-center gap-3 w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-4 rounded-2xl font-bold text-lg hover:shadow-yellow-500/50 shadow-xl transition-all group">
+                    <i data-lucide="zap" class="w-6 h-6 group-hover:w-7 group-hover:h-7"></i>
+                    Voltar aos Cursos
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL COM TOC -->
+    <main class="lg:pr-96 container mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <!-- 1. Introdução -->
+        <section id="introducao" class="print-section bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl p-12 lg:p-20 border border-white/50 mb-20">
+            <div class="flex items-start gap-6 mb-12">
+                <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center shadow-2xl shrink-0 mt-1">
+                    <i data-lucide="file-text" class="w-10 h-10 text-white font-bold"></i>
+                </div>
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">1. Introdução e Aceitação</h2>
+                    <p class="text-2xl text-gray-700 leading-relaxed">
+                        Estes Termos de Uso regem o uso da plataforma Super Conhecimento. Ao acessar ou usar nossos serviços, você declara ter lido, compreendido e aceita todos os termos aqui estabelecidos.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-10 border-l-8 border-blue-500">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-blue-500 rounded-2xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0">!</div>
+                    <h4 class="text-2xl font-bold text-blue-900">Última Atualização</h4>
+                </div>
+                <p class="text-xl text-blue-800 font-semibold">Janeiro de 2025 - Vigência imediata para todos os usuários</p>
+            </div>
+        </section>
+
+        <!-- 2. Objeto -->
+        <section id="objeto" class="print-section bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl p-12 lg:p-20 border border-white/50 mb-20">
+            <div class="flex items-start gap-6 mb-12">
+                <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center shadow-2xl shrink-0 mt-1">
+                    <i data-lucide="book-open" class="w-10 h-10 text-white font-bold"></i>
+                </div>
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">2. Objeto do Contrato</h2>
+                    <p class="text-2xl text-gray-700 leading-relaxed mb-8">
+                        A Super Conhecimento oferece acesso a plataforma de cursos online com 328 cursos certificados através de chaves de ativação fornecidas por provedores autorizados.
+                    </p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="group p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-200 hover:shadow-xl hover:shadow-green-200/50 transition-all cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all font-bold text-xl shadow-xl mx-auto">328</div>
+                    <h4 class="text-2xl font-black text-green-900 mb-3 text-center">Cursos Disponíveis</h4>
+                    <p class="text-green-800 text-lg font-semibold text-center">Todas as áreas do conhecimento</p>
+                </div>
+                <div class="group p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 hover:shadow-xl hover:shadow-blue-200/50 transition-all cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-500 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all font-bold text-xl shadow-xl mx-auto">12</div>
+                    <h4 class="text-2xl font-black text-blue-900 mb-3 text-center">Meses de Acesso</h4>
+                    <p class="text-blue-800 text-lg font-semibold text-center">Tempo ilimitado para estudar</p>
+                </div>
+                <div class="group p-8 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl border border-yellow-200 hover:shadow-xl hover:shadow-yellow-200/50 transition-all cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all font-bold text-xl shadow-xl mx-auto">✓</div>
+                    <h4 class="text-2xl font-black text-yellow-900 mb-3 text-center">Certificados Incluidos</h4>
+                    <p class="text-yellow-800 text-lg font-semibold text-center">Válidos em todo Brasil</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Conta e Responsabilidades -->
+        <section id="conta" class="print-section bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl p-12 lg:p-20 border border-white/50 mb-20">
+            <div class="flex items-start gap-6 mb-12">
+                <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-violet-600 rounded-3xl flex items-center justify-center shadow-2xl shrink-0 mt-1">
+                    <i data-lucide="user" class="w-10 h-10 text-white font-bold"></i>
+                </div>
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">3. Sua Conta e Responsabilidades</h2>
+                </div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 mb-12">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-3xl font-black text-gray-900 mb-6">3.1 Criação de Conta</h3>
+                        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-8">
+                            <ol class="space-y-4 text-xl text-gray-800">
+                                <li class="flex items-start gap-4">
+                                    <span class="w-8 h-8 bg-emerald-500 text-white rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0 mt-0.5">1</span>
+                                    <span>Confirme pagamento com seu provedor autorizado</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <span class="w-8 h-8 bg-emerald-500 text-white rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0 mt-0.5">2</span>
+                                    <span>Receba chave de ativação (e-mail/WhatsApp em 2 minutos)</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <span class="w-8 h-8 bg-emerald-500 text-white rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0 mt-0.5">3</span>
+                                    <span>Acesse plataforma → Insira chave → 328 cursos liberados</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-3xl font-black text-gray-900 mb-6">3.2 Suas Responsabilidades</h3>
+                        <div class="bg-orange-50 border border-orange-200 rounded-2xl p-8">
+                            <div class="grid md:grid-cols-2 gap-6 text-xl">
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-orange-400">
+                                        <i data-lucide="key" class="w-8 h-8 text-orange-500"></i>
+                                        <span class="font-semibold text-orange-900">Manter Chave Secreta</span>
+                                    </div>
+                                    <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-orange-400">
+                                        <i data-lucide="book" class="w-8 h-8 text-orange-500"></i>
+                                        <span class="font-semibold text-orange-900">Uso Educacional Apenas</span>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-orange-400">
+                                        <i data-lucide="eye-off" class="w-8 h-8 text-orange-500"></i>
+                                        <span class="font-semibold text-orange-900">Não Gravar Tela</span>
+                                    </div>
+                                    <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-orange-400">
+                                        <i data-lucide="shield-alert" class="w-8 h-8 text-orange-500"></i>
+                                        <span class="font-semibold text-orange-900">Notificar Irregularidades</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-red-50 border-2 border-red-200 rounded-3xl p-8 lg:p-12 mt-12">
+                <div class="flex items-center gap-6">
+                    <div class="w-16 h-16 bg-red-500 text-white rounded-2xl flex items-center justify-center font-bold text-2xl flex-shrink-0">⚠️</div>
+                    <div>
+                        <h4 class="text-3xl font-black text-red-900 mb-4">Compartilhamento = Banimento</h4>
+                        <p class="text-xl text-red-800 leading-relaxed">
+                            Compartilhar sua chave de acesso resulta em bloqueio permanente da conta sem reembolso. 
+                            Monitoramos acessos simultâneos por IP/dispositivo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Conteúdo e Propriedade Intelectual -->
+        <section id="conteudo" class="print-section bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl p-12 lg:p-20 border border-white/50 mb-20">
+            <div class="flex items-start gap-6 mb-12">
+                <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-3xl flex items-center justify-center shadow-2xl shrink-0 mt-1">
+                    <i data-lucide="copyright" class="w-10 h-10 text-white font-bold"></i>
+                </div>
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">4. Conteúdo e Direitos Autorais</h2>
+                </div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-3xl font-black text-gray-900 mb-8">O que você PODE fazer:</h3>
+                    <div class="space-y-4 text-xl text-gray-800 mb-12">
+                        <div class="flex items-start gap-4 p-6 bg-emerald-50 border border-emerald-200 rounded-2xl hover:shadow-md transition-all">
+                            <div class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center font-bold text-lg mt-0.5 flex-shrink-0">✓</div>
+                            <div>Acessar e assistir os cursos normalmente</div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-emerald-50 border border-emerald-200 rounded-2xl hover:shadow-md transition-all">
+                            <div class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center font-bold text-lg mt-0.5 flex-shrink-0">✓</div>
+                            <div>Baixar seu certificado pessoal para uso próprio</div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-emerald-50 border border-emerald-200 rounded-2xl hover:shadow-md transition-all">
+                            <div class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center font-bold text-lg mt-0.5 flex-shrink-0">✓</div>
+                            <div>Fazer anotações pessoais (print screenshots próprios)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-3xl font-black text-gray-900 mb-8">O que você NÃO PODE fazer:</h3>
+                    <div class="space-y-4 text-xl text-gray-800 mb-12">
+                        <div class="flex items-start gap-4 p-6 bg-red-50 border border-red-200 rounded-2xl hover:shadow-md transition-all">
+                            <div class="w-12 h-12 bg-red-500 text-white rounded-xl flex items-center justify-center font-bold text-lg mt-0.5 flex-shrink-0">✗</div>
+                            <div>Gravar tela ou baixar vídeos</div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-red-50 border border-red-200 rounded-2xl hover:shadow-md transition-all">
+                            <div class="w-12 h-12 bg-red-500 text-white rounded-xl flex items-center justify-center font-bold text-lg mt-0.5 flex-shrink-0">✗</div>
+                            <div>Compartilhar acesso com terceiros</div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-red-50 border border-red-200 rounded-2xl hover:shadow-md transition-all">
+                            <div class="w-12 h-12 bg-red-500 text-white rounded-xl flex items-center justify-center font-bold text-lg mt-0.5 flex-shrink-0">✗</div>
+                            <div>Vender ou redistribuir conteúdo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-3xl p-12 border border-purple-200 mt-16">
+                <h4 class="text-3xl font-black text-purple-900 mb-8 text-center">Proteção Legal</h4>
+                <p class="text-xl text-purple-800 leading-relaxed text-center max-w-4xl mx-auto">
+                    Todo conteúdo é protegido por direitos autorais (Lei 9.610/98). Monitoramos uso indevido com tecnologias anti-pirataria. 
+                    Violações sujeitam-se a ações civis e criminais.
+                </p>
+            </div>
+        </section>
+
+        <!-- 5. Certificados -->
+        <section id="certificados" class="print-section bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl p-12 lg:p-20 border border-white/50 mb-20">
+            <div class="flex items-start gap-6 mb-12">
+                <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center shadow-2xl shrink-0 mt-1">
+                    <i data-lucide="award" class="w-10 h-10 text-white font-bold"></i>
+                </div>
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">5. Certificados Digitais</h2>
+                </div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 mb-16">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-3xl font-black text-gray-900 mb-6">Como Funciona</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-6 p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl border border-green-200 shadow-inner">
+                                <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-xl flex-shrink-0">100%</div>
+                                <div>
+                                    <h4 class="text-2xl font-black text-green-900 mb-3">Conclusão Total</h4>
+                                    <p class="text-xl text-green-800 leading-relaxed">Assista todos os vídeos do curso</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6 p-8 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl border border-blue-200 shadow-inner">
+                                <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-500 text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-xl flex-shrink-0">60%</div>
+                                <div>
+                                    <h4 class="text-2xl font-black text-blue-900 mb-3">Avaliação Final</h4>
+                                    <p class="text-xl text-blue-800 leading-relaxed">Prova com nota mínima 60 pontos</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6 p-8 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-3xl border border-yellow-200 shadow-inner">
+                                <div class="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0">
+                                    <i data-lucide="download" class="w-8 h-8"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-2xl font-black text-yellow-900 mb-3">Download Instantâneo</h4>
+                                    <p class="text-xl text-yellow-800 leading-relaxed">PDF com hash único de validação</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:pt-20">
+                    <h3 class="text-3xl font-black text-gray-900 mb-8">Validade e Reconhecimento</h3>
+                    <div class="space-y-6 text-xl text-gray-800">
+                        <div class="p-8 bg-gradient-to-r from-emerald-50 to-green-50 rounded-3xl border-4 border-emerald-200 shadow-2xl">
+                            <div class="flex items-center gap-6 mb-8">
+                                <div class="w-20 h-20 bg-emerald-500 text-white rounded-2xl flex items-center justify-center font-black text-3xl shadow-2xl flex-shrink-0">✓</div>
+                                <div>
+                                    <h4 class="text-3xl font-black text-emerald-900 mb-4">100% Válido Brasil</h4>
+                                    <ul class="space-y-3 text-emerald-800">
+                                        <li>• Reconhecido para currículo profissional</li>
+                                        <li>• Hash único de validação online</li>
+                                        <li>• QR Code com histórico completo</li>
+                                        <li>• Compatível com plataformas RH</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-red-50 border-4 border-red-200 rounded-3xl p-8 mt-12">
+                            <div class="flex items-center gap-6">
+                                <div class="w-20 h-20 bg-red-500 text-white rounded-2xl flex items-center justify-center font-bold text-3xl flex-shrink-0">⚠️</div>
+                                <div>
+                                    <h4 class="text-3xl font-black text-red-900 mb-4">Não Substitui:</h4>
+                                    <ul class="space-y-2 text-xl text-red-800 columns-2">
+                                        <li>• CRM / CRO / outros conselhos</li>
+                                        <li>• OAB / outros exames</li>
+                                        <li>• Concurso público específico</li>
+                                        <li>• Pós-graduação formal</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Pagamentos e Garantia -->
+        <section id="pagamentos" class="print-section bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl p-12 lg:p-20 border border-white/50 mb-20">
+            <div class="flex items-start gap-6 mb-12">
+                <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center shadow-2xl shrink-0 mt-1">
+                    <i data-lucide="credit-card" class="w-10 h-10 text-white font-bold"></i>
+                </div>
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">6. Pagamentos e Garantias</h2>
+                </div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-3xl font-black text-gray-900 mb-8">Pagamento Seguro</h3>
+                    <div class="space-y-6">
+                        <div class="p-8 bg-gradient-to-r from-emerald-50 to-green-50 rounded-3xl border border-emerald-200 shadow-xl hover:shadow-emerald-200/50 transition-all">
+                            <div class="flex items-center gap-6 mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-r from-emerald-400 to-green-500 text-white rounded-2xl flex items-center justify-center shadow-xl font-bold text-2xl">SSL</div>
+                                <h4 class="text-2xl font-black text-emerald-900">Criptografia Completa</h4>
+                            </div>
+                            <p class="text-xl text-emerald-800 leading-relaxed">
+                                Todos os pagamentos processados exclusivamente pelos provedores autorizados. 
+                                Super Conhecimento NÃO armazena dados de cartão ou bancários.
+                            </p>
+                        </div>
+                        
+                        <div class="p-8 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl border border-blue-200 shadow-xl hover:shadow-blue-200/50 transition-all">
+                            <div class="flex items-center gap-6 mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-500 text-white rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0">
+                                    <i data-lucide="clock" class="w-8 h-8"></i>
+                                </div>
+                                <h4 class="text-2xl font-black text-blue-900">Ativação 2 Minutos</h4>
+                            </div>
+                            <p class="text-xl text-blue-800 leading-relaxed">
+                                Confirmação → Chave de ativação → Plataforma liberada. Tempo médio: 120 segundos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-3xl font-black text-gray-900 mb-8">Garantia Total</h3>
+                    <div class="space-y-6 mb-12">
+                        <div class="p-10 bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl border-4 border-green-200 shadow-2xl relative overflow-hidden">
+                            <div class="absolute top-0 right-0 bg-green-500 text-white px-6 py-3 font-bold text-xl rounded-bl-3xl">7 DIAS</div>
+                            <div class="flex items-center gap-8 mb-8">
+                                <div class="w-24 h-24 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-3xl flex items-center justify-center shadow-2xl font-black text-3xl flex-shrink-0">100%</div>
+                                <div>
+                                    <h4 class="text-3xl font-black text-green-900 mb-4">Garantia Incondicional</h4>
+                                    <p class="text-2xl text-green-800 font-semibold">Dinheiro de volta em 7 dias</p>
+                                </div>
+                            </div>
+                            <ul class="grid md:grid-cols-2 gap-4 text-xl text-green-800 space-y-0">
+                                <li class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border-l-4 border-green-400">
+                                    <i data-lucide="refresh-cw" class="w-8 h-8 text-green-500 flex-shrink-0"></i>
+                                    <span>Reembolso total sem burocracia</span>
+                                </li>
+                                <li class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border-l-4 border-green-400">
+                                    <i data-lucide="shield-check" class="w-8 h-8 text-green-500 flex-shrink-0"></i>
+                                    <span>Solicitação pelo provedor</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Métodos aceitos -->
+                    <div class="bg-gray-50 rounded-3xl p-10">
+                        <h4 class="text-2xl font-black text-gray-900 mb-8 text-center">Formas de Pagamento</h4>
+                        <div class="grid md:grid-cols-4 gap-6 justify-items-center">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl mx-auto shadow-xl mb-3">Visa</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl mx-auto shadow-xl mb-3">Master</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl mx-auto shadow-xl mb-3">Elo</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gradient-to-r from-purple-400 to-purple-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl mx-auto shadow-xl mb-3">PIX</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. LGPD -->
+        <section id="lgpd" class="print-section bg-gradient-to-r from-indigo-50 via-purple-50 to-blue-50 rounded-4xl shadow-2xl p-16 lg:p-24 border-4 border-indigo-200/50 relative overflow-hidden mb-20">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full opacity-5 blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div class="flex items-start gap-8 mb-16 relative z-10">
+                <div class="w-24 h-24 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl flex items-center justify-center shadow-2xl shrink-0 mt-1">
+                    <i data-lucide="shield" class="w-12 h-12 text-white font-bold"></i>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-5xl lg:text-6xl font-black text-gray-900 mb-6 bg-gradient-to-r from-indigo-900 to-purple-900 bg-clip-text text-transparent">7. LGPD - Proteção Total</h2>
+                    <p class="text-2xl text-gray-700 leading-relaxed max-w-4xl">
+                        Total conformidade com a Lei Geral de Proteção de Dados (Lei 13.709/2018)
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 mb-16">
+                <div class="space-y-8">
+                    <div class="bg-white/80 backdrop-blur-lg rounded-3xl p-10 border border-indigo-200 shadow-xl hover:shadow-indigo-200/50 transition-all">
+                        <h4 class="text-3xl font-black text-indigo-900 mb-6">Dados Coletados</h4>
+                        <ul class="space-y-4 text-xl text-indigo-800">
+                            <li class="flex items-start gap-4">
+                                <i data-lucide="user" class="w-8 h-8 text-indigo-500 mt-1 flex-shrink-0"></i>
+                                <span>Nome completo, e-mail, chave de ativação</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i data-lucide="smartphone" class="w-8 h-8 text-indigo-500 mt-1 flex-shrink-0"></i>
+                                <span>Número de WhatsApp (opcional)</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i data-lucide="activity" class="w-8 h-8 text-indigo-500 mt-1 flex-shrink-0"></i>
+                                <span>Progresso dos cursos (para certificados)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="bg-white/80 backdrop-blur-lg rounded-3xl p-10 border border-purple-200 shadow-xl hover:shadow-purple-200/50 transition-all">
+                        <h4 class="text-3xl font-black text-purple-900 mb-6">Para Que Servem</h4>
+                        <ul class="space-y-4 text-xl text-purple-800">
+                            <li class="flex items-start gap-4">
+                                <i data-lucide="check-circle" class="w-8 h-8 text-purple-500 mt-1 flex-shrink-0"></i>
+                                <span>Liberar seu acesso aos cursos</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i data-lucide="award" class="w-8 h-8 text-purple-500 mt-1 flex-shrink-0"></i>
+                                <span>Emitir seus certificados pessoais</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i data-lucide="mail" class="w-8 h-8 text-purple-500 mt-1 flex-shrink-0"></i>
+                                <span>Enviar atualizações importantes</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i data-lucide="eye-off" class="w-8 h-8 text-purple-500 mt-1 flex-shrink-0"></i>
+                                <span><strong>Nunca compartilhamos com terceiros</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-indigo-100 to-purple-100 rounded-4xl p-12 border-4 border-indigo-300/30 shadow-2xl text-center">
+                <h4 class="text-4xl font-black text-indigo-900 mb-8">Seus Direitos LGPD</h4>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-xl">
+                    <div class="p-8 bg-white rounded-3xl shadow-xl hover:shadow-indigo-200/50 transition-all group">
+                        <i data-lucide="access-point" class="w-16 h-16 text-indigo-500 mx-auto mb-6 group-hover:scale-110 transition-transform"></i>
+                        <h5 class="text-2xl font-black text-indigo-900 mb-4">Acesso</h5>
+                        <p class="text-indigo-800">Solicite cópia de todos seus dados</p>
+                    </div>
+                    <div class="p-8 bg-white rounded-3xl shadow-xl hover:shadow-indigo-200/50 transition-all group">
+                        <i data-lucide="edit-3" class="w-16 h-16 text-indigo-500 mx-auto mb-6 group-hover:scale-110 transition-transform"></i>
+                        <h5 class="text-2xl font-black text-indigo-900 mb-4">Correção</h5>
+                        <p class="text-indigo-800">Atualize informações incorretas</p>
+                    </div>
+                    <div class="p-8 bg-white rounded-3xl shadow-xl hover:shadow-indigo-200/50 transition-all group">
+                        <i data-lucide="trash-2" class="w-16 h-16 text-indigo-500 mx-auto mb-6 group-hover:scale-110 transition-transform"></i>
+                        <h5 class="text-2xl font-black text-indigo-900 mb-4">Exclusão</h5>
+                        <p class="text-indigo-800">Delete seus dados quando quiser</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Pagamentos -->
+        <section id="responsabilidades" class="print-section bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl p-12 lg:p-20 border border-white/50 mb-20">
+            <div class="flex items-start gap-6 mb-12">
+                <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-3xl flex items-center justify-center shadow-2xl shrink-0 mt-1">
+                    <i data-lucide="users" class="w-10 h-10 text-white font-bold"></i>
+                </div>
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">8. Nossas e Suas Responsabilidades</h2>
+                </div>
+            </div>
+            
+            <div class="grid xl:grid-cols-2 gap-16 mb-16">
+                <!-- Nossas responsabilidades -->
+                <div>
+                    <h3 class="text-3xl font-black text-gray-900 mb-10 flex items-center gap-4">
+                        <span class="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-xl">✓</span>
+                        Garantimos para você:
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl border border-green-200 shadow-xl hover:shadow-emerald-300/50 transition-all group">
+                            <div class="flex items-start gap-6 mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-xl flex-shrink-0 mt-0.5">99.9%</div>
+                                <h5 class="text-2xl font-black text-green-900 flex-1">Disponibilidade da Plataforma</h5>
+                            </div>
+                            <p class="text-xl text-green-800 leading-relaxed">Plataforma disponível 24/7 com uptime de 99.9% e monitoramento proativo</p>
+                        </div>
+                        <div class="p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl border border-green-200 shadow-xl hover:shadow-emerald-300/50 transition-all group">
+                            <div class="flex items-start gap-6 mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-xl flex-shrink-0 mt-0.5">7 DIAS</div>
+                                <h5 class="text-2xl font-black text-green-900 flex-1">Garantia Total</h5>
+                            </div>
+                            <p class="text-xl text-green-800 leading-relaxed">Reembolso integral solicitado pelo seu provedor em até 7 dias</p>
+                        </div>
+                        <div class="p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl border border-green-200 shadow-xl hover:shadow-emerald-300/50 transition-all group">
+                            <div class="flex items-start gap-6 mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0">
+                                    <i data-lucide="database" class="w-9 h-9"></i>
+                                </div>
+                                <h5 class="text-2xl font-black text-green-900 flex-1">Backup Automático</h5>
+                            </div>
+                            <p class="text-xl text-green-800 leading-relaxed">Todo progresso salvo automaticamente com backup redundante</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suas responsabilidades -->
+                <div>
+                    <h3 class="text-3xl font-black text-gray-900 mb-10 flex items-center gap-4">
+                        <span class="w-12 h-12 bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-xl">⚠️</span>
+                        Você se compromete:
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="p-8 bg-gradient-to-r from-orange-50 to-red-50 rounded-3xl border border-orange-200 shadow-xl hover:shadow-orange-300/50 transition-all group">
+                            <div class="flex items-start gap-6 mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-xl flex-shrink-0 mt-0.5">🔒</div>
+                                <h5 class="text-2xl font-black text-orange-900 flex-1">Proteger Sua Chave</h5>
+                            </div>
+                            <p class="text-xl text-orange-800 leading-relaxed">Mantenha sua chave de ativação confidencial. Não compartilhe com terceiros</p>
+                        </div>
+                        <div class="p-8 bg-gradient-to-r from-orange-50 to-red-50 rounded-3xl border border-orange-200 shadow-xl hover:shadow-orange-300/50 transition-all group">
+                            <div class="flex items-start gap-6 mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-xl flex-shrink-0 mt-0.5">📱</div>
+                                <h5 class="text-2xl font-black text-orange-900 flex-1">Uso Pessoal</h5>
+                            </div>
+                            <p class="text-xl text-orange-800 leading-relaxed">Use apenas para estudo pessoal. Proibido acesso simultâneo ou compartilhamento</p>
+                        </div>
+                        <div class="p-8 bg-gradient-to-r from-orange-50 to-red-50 rounded-3xl border border-orange-200 shadow-xl hover:shadow-orange-300/50 transition-all group">
+                            <div class="flex items-start gap-6 mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0">
+                                    <i data-lucide="camera-off" class="w-9 h-9"></i>
+                                </div>
+                                <h5 class="text-2xl font-black text-orange-900 flex-1">Sem Gravações</h5>
+                            </div>
+                            <p class="text-xl text-orange-800 leading-relaxed">Proibida gravação de tela ou download de conteúdo protegido</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Cancelamento e Término -->
+        <section id="cancelamento" class="print-section bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl p-12 lg:p-20 border border-white/50 mb-20">
+            <div class="flex items-start gap-6 mb-12">
+                <div class="w-20 h-20 bg-gradient-to-br from-gray-500 to-gray-600 rounded-3xl flex items-center justify-center shadow-2xl shrink-0 mt-1">
+                    <i data-lucide="x-circle" class="w-10 h-10 text-white font-bold"></i>
+                </div>
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">9. Cancelamento e Término</h2>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-4xl p-16 border-4 border-gray-200 shadow-inner">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="inline-flex items-center gap-4 bg-gradient-to-r from-gray-400 to-gray-500 text-white px-10 py-6 rounded-3xl font-bold text-2xl shadow-2xl mb-12 mx-auto">
+                        <i data-lucide="calendar-x" class="w-10 h-10"></i>
+                        Cancelamento Direto com Provedor
+                    </div>
+                    <h3 class="text-4xl font-black text-gray-900 mb-8">Como Cancelar</h3>
+                    <div class="grid md:grid-cols-2 gap-12 text-xl text-gray-800 mb-16">
+                        <div class="space-y-6">
+                            <div class="p-10 bg-white rounded-3xl shadow-xl border border-gray-200 hover:shadow-gray-300/50 transition-all text-left">
+                                <div class="flex items-center gap-6 mb-6">
+                                    <div class="w-20 h-20 bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-2xl flex items-center justify-center font-bold text-3xl shadow-2xl flex-shrink-0">1</div>
+                                    <h5 class="text-3xl font-black text-gray-900">Contate Provedor</h5>
+                                </div>
+                                <p class="leading-relaxed">Entre em contato com quem comprou seu acesso. Solicite reembolso dentro dos 7 dias de garantia.</p>
+                            </div>
+                            <div class="p-10 bg-white rounded-3xl shadow-xl border border-gray-200 hover:shadow-gray-300/50 transition-all text-left">
+                                <div class="flex items-center gap-6 mb-6">
+                                    <div class="w-20 h-20 bg-gradient-to-r from-blue-400 to-cyan-500 text-white rounded-2xl flex items-center justify-center font-bold text-3xl shadow-2xl flex-shrink-0">2</div>
+                                    <h5 class="text-3xl font-black text-gray-900">Reembolso</h5>
+                                </div>
+                                <p class="leading-relaxed">Provedor processa estorno. Tempo médio 3-10 dias úteis conforme método de pagamento.</p>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="p-10 bg-white rounded-3xl shadow-xl border border-gray-200 hover:shadow-gray-300/50 transition-all text-left">
+                                <div class="flex items-center gap-6 mb-6">
+                                    <div class="w-20 h-20 bg-gradient-to-r from-emerald-400 to-green-500 text-white rounded-2xl flex items-center justify-center font-bold text-3xl shadow-2xl flex-shrink-0">✓</div>
+                                    <h5 class="text-3xl font-black text-gray-900">Garantia 7 Dias</h5>
+                                </div>
+                                <ul class="space-y-3 text-xl text-emerald-800">
+                                    <li>• Reembolso total sem perguntas</li>
+                                    <li>• Mesmo valor pago originalmente</li>
+                                    <li>• Processado pelo provedor</li>
+                                </ul>
+                            </div>
+                            <div class="p-10 bg-red-50 border-4 border-red-200 rounded-3xl shadow-xl text-left">
+                                <div class="flex items-center gap-6 mb-6">
+                                    <div class="w-20 h-20 bg-gradient-to-r from-red-400 to-orange-500 text-white rounded-2xl flex items-center justify-center font-bold text-3xl shadow-2xl flex-shrink-0">⚠️</div>
+                                    <h5 class="text-3xl font-black text-red-900">Após 7 Dias</h5>
+                                </div>
+                                <p class="text-xl text-red-800 leading-relaxed">
+                                    Não reembolsamos após 7 dias ou uso parcial dos cursos/certificados emitidos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Limitação de Responsabilidade -->
+        <section id="limitacao" class="print-section bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl p-12 lg:p-20 border border-white/50 mb-20">
+            <div class="flex items-start gap-6 mb-12">
+                <div class="w-20 h-20 bg-gradient-to-br from-gray-500 to-slate-600 rounded-3xl flex items-center justify-center shadow-2xl shrink-0 mt-1">
+                    <i data-lucide="alert-triangle" class="w-10 h-10 text-white font-bold"></i>
+                </div>
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">10. Limitação de Responsabilidade</h2>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-gray-50 to-slate-50 rounded-4xl p-16 border-4 border-gray-300/30 shadow-2xl">
+                <div class="max-w-5xl mx-auto">
+                    <h3 class="text-4xl font-black text-gray-900 mb-12 text-center">O que Garantimos vs Não Garantimos</h3>
+                    
+                    <div class="grid lg:grid-cols-2 gap-16">
+                        <!-- Garantimos -->
+                        <div>
+                            <h4 class="text-3xl font-black text-emerald-900 mb-10 text-center">✅ GARANTIMOS</h4>
+                            <div class="space-y-8">
+                                <div class="p-10 rounded-3xl bg-gradient-to-br from-emerald-50 to-green-50 border-4 border-emerald-200 shadow-2xl hover:shadow-emerald-300/50 transition-all">
+                                    <h5 class="text-2xl font-black text-emerald-900 mb-6 flex items-center gap-4">
+                                        <i data-lucide="check-circle" class="w-10 h-10 text-emerald-500"></i>
+                                        Qualidade Técnica
+                                    </h5>
+                                    <p class="text-xl text-emerald-800 leading-relaxed">
+                                        Plataforma com 99.9% uptime, vídeos HD, responsivo mobile, suporte técnico 24/7
+                                    </p>
+                                </div>
+                                <div class="p-10 rounded-3xl bg-gradient-to-br from-emerald-50 to-green-50 border-4 border-emerald-200 shadow-2xl hover:shadow-emerald-300/50 transition-all">
+                                    <h5 class="text-2xl font-black text-emerald-900 mb-6 flex items-center gap-4">
+                                        <i data-lucide="award" class="w-10 h-10 text-emerald-500"></i>
+                                        Certificados Válidos
+                                    </h5>
+                                    <p class="text-xl text-emerald-800 leading-relaxed">
+                                        Digitais com hash único, reconhecidos para currículo, QR code verificável
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Não Garantimos -->
+                        <div>
+                            <h4 class="text-3xl font-black text-red-900 mb-10 text-center">❌ NÃO GARANTIMOS</h4>
+                            <div class="space-y-8">
+                                <div class="p-10 rounded-3xl bg-gradient-to-br from-red-50 to-orange-50 border-4 border-red-200 shadow-2xl hover:shadow-red-300/50 transition-all">
+                                    <h5 class="text-2xl font-black text-red-900 mb-6 flex items-center gap-4">
+                                        <i data-lucide="x-circle" class="w-10 h-10 text-red-500"></i>
+                                        Promoção Profissional
+                                    </h5>
+                                    <p class="text-xl text-red-800 leading-relaxed">
+                                        Cursos aumentam qualificações mas não garantem emprego/promoção
+                                    </p>
+                                </div>
+                                <div class="p-10 rounded-3xl bg-gradient-to-br from-red-50 to-orange-50 border-4 border-red-200 shadow-2xl hover:shadow-red-300/50 transition-all">
+                                    <h5 class="text-2xl font-black text-red-900 mb-6 flex items-center gap-4">
+                                        <i data-lucide="target" class="w-10 h-10 text-red-500"></i>
+                                        Registro Profissional
+                                    </h5>
+                                    <p class="text-xl text-red-800 leading-relaxed">
+                                        Não substitui CRM/CRO/OAB ou outros registros de conselho
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Disposições Finais -->
+        <section id="finais" class="print-section bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white rounded-4xl shadow-2xl p-20 lg:p-32 border-8 border-gray-700/50 relative overflow-hidden mb-24">
+            <div class="absolute inset-0 bg-grid-white/[0.03]"></div>
+            <div class="relative z-10 text-center max-w-6xl mx-auto">
+                <div class="inline-flex items-center gap-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-6 rounded-3xl font-black text-2xl shadow-2xl mb-16 mx-auto backdrop-blur-sm border border-white/20">
+                    <i data-lucide="file-signature" class="w-10 h-10"></i>
+                    Disposições Legais Finais
+                </div>
+                
+                <h2 class="text-6xl lg:text-7xl font-black mb-12 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent leading-tight">
+                    Assinatura Digital
+                </h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
+                    <div class="group p-12 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 hover:bg-white/20 transition-all shadow-2xl hover:shadow-white/10">
+                        <h4 class="text-3xl font-black text-white mb-6 flex items-center gap-4 justify-center">
+                            <i data-lucide="gavel" class="w-12 h-12 opacity-75"></i>
+                            Lei Aplicável
+                        </h4>
+                        <p class="text-2xl text-gray-200 text-center leading-relaxed">Legislação Brasileira</p>
+                        <p class="text-xl text-gray-300 mt-4 font-semibold">Foro: Comarca de [Cidade Capital/UF]</p>
+                    </div>
+                    <div class="group p-12 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 hover:bg-white/20 transition-all shadow-2xl hover:shadow-white/10">
+                        <h4 class="text-3xl font-black text-white mb-6 flex items-center gap-4 justify-center">
+                            <i data-lucide="edit" class="w-12 h-12 opacity-75"></i>
+                            Modificações
+                        </h4>
+                        <p class="text-2xl text-gray-200 text-center leading-relaxed">Atualizações notificadas por e-mail</p>
+                        <p class="text-xl text-gray-300 mt-4 font-semibold">Continuar usando = aceitação automática</p>
+                    </div>
+                    <div class="group p-12 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 hover:bg-white/20 transition-all shadow-2xl hover:shadow-white/10">
+                        <h4 class="text-3xl font-black text-white mb-6 flex items-center gap-4 justify-center">
+                            <i data-lucide="mail" class="w-12 h-12 opacity-75"></i>
+                            Suporte Oficial
+                        </h4>
+                        <p class="text-xl text-gray-200 font-mono text-center leading-relaxed">superconhecimento7@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/20 pt-16 mt-20">
+                    <p class="text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
+                        Estes Termos constituem contrato completo entre Super Conhecimento e usuário. 
+                        Nenhuma renúncia a qualquer cláusula prejudica direitos futuros.
+                    </p>
+                    
+                    <div class="flex flex-col items-center gap-8 lg:flex-row lg:gap-20 lg:items-end">
+                        <div class="text-center lg:text-left">
+                            <p class="text-3xl font-black text-white mb-4">Data de Aceitação</p>
+                            <p class="text-5xl font-mono text-yellow-400 font-black" id="data-aceite">[Automática]</p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-6 pt-8 border-t border-white/20 w-full lg:w-auto lg:border-t-0 lg:pt-0">
+                            <button onclick="window.print()" class="flex items-center gap-4 bg-white/20 backdrop-blur text-white border border-white/30 px-12 py-6 rounded-3xl font-bold text-xl hover:bg-white/30 hover:shadow-white/20 shadow-xl transition-all group">
+                                <i data-lucide="printer" class="w-7 h-7 group-hover:w-8 group-hover:h-8"></i>
+                                Imprimir Contrato
+                            </button>
+                            <a href="index.html#oferta" class="inline-flex items-center gap-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-6 rounded-3xl font-black text-xl shadow-2xl hover:shadow-yellow-500/50 hover:shadow-2xl transition-all group">
+                                <i data-lucide="zap" class="w-7 h-7 group-hover:w-8 group-hover:h-8"></i>
+                                Começar Cursos Agora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER COERENTE -->
+    <footer class="bg-gradient-to-b from-gray-900 to-black text-white pt-20 pb-12 border-t border-gray-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <!-- Logo -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-4 mb-8">
+                        <img src="img/logo-super.png" alt="Super Conhecimento" class="h-16 filter brightness-0 invert">
+                        <span class="font-black text-3xl bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Super</span>
+                    </div>
+                    <p class="text-xl text-gray-300 leading-relaxed mb-8 opacity-90">
+                        Plataforma educacional com 328 cursos certificados. Transformando carreiras desde 2020.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="https://instagram.com/super_conhecimento" class="w-16 h-16 bg-white/10 backdrop-blur rounded-3xl flex items-center justify-center hover:bg-white/20 transition-all hover:scale-110 shadow-xl">
+                            <i data-lucide="instagram" class="w-8 h-8"></i>
+                        </a>
+                        <a href="https://facebook.com/SuperConhecimento" class="w-16 h-16 bg-white/10 backdrop-blur rounded-3xl flex items-center justify-center hover:bg-white/20 transition-all hover:scale-110 shadow-xl">
+                            <i data-lucide="facebook" class="w-8 h-8"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/superconhecimento" class="w-16 h-16 bg-white/10 backdrop-blur rounded-3xl flex items-center justify-center hover:bg-white/20 transition-all hover:scale-110 shadow-xl">
+                            <i data-lucide="linkedin" class="w-8 h-8"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Categorias -->
+                <div>
+                    <h5 class="text-2xl font-black text-white mb-8 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Categorias</h5>
+                    <ul class="space-y-4">
+                        <li><a href="cursos.html" class="text-xl text-gray-300 hover:text-yellow-400 font-semibold transition-all group flex items-center gap-3">
+                            <span class="w-4 h-4 bg-yellow-400 rounded-full scale-0 group-hover:scale-100 transition-transform"></span>
+                            Administração (124)
+                        </a></li>
+                        <li><a href="cursos.html?categoria=Direito" class="text-xl text-gray-300 hover:text-red-400 font-semibold transition-all group flex items-center gap-3">
+                            <span class="w-4 h-4 bg-red-400 rounded-full scale-0 group-hover:scale-100 transition-transform"></span>
+                            Direito (38)
+                        </a></li>
+                        <li><a href="cursos.html?categoria=Desenvolvimento" class="text-xl text-gray-300 hover:text-blue-400 font-semibold transition-all group flex items-center gap-3">
+                            <span class="w-4 h-4 bg-blue-400 rounded-full scale-0 group-hover:scale-100 transition-transform"></span>
+                            Desenvolvimento (56)
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Institucional -->
+                <div>
+                    <h5 class="text-2xl font-black text-white mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Institucional</h5>
+                    <ul class="space-y-4">
+                        <li><a href="index.html#beneficios" class="text-xl text-gray-300 hover:text-blue-400 group flex items-center gap-3 transition-all">
+                            <i data-lucide="award" class="w-6 h-6 opacity-50 group-hover:opacity-100"></i>Benefícios
+                        </a></li>
+                        <li><a href="index.html#como-funciona" class="text-xl text-gray-300 hover:text-blue-400 group flex items-center gap-3 transition-all">
+                            <i data-lucide="play" class="w-6 h-6 opacity-50 group-hover:opacity-100"></i>Como Funciona
+                        </a></li>
+                        <li><a href="cursos.html" class="text-xl text-gray-300 hover:text-yellow-400 group flex items-center gap-3 transition-all">
+                            <i data-lucide="book" class="w-6 h-6 opacity-50 group-hover:opacity-100"></i>Cursos Completos
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Suporte -->
+                <div>
+                    <h5 class="text-2xl font-black text-white mb-8 bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Suporte</h5>
+                    <div class="space-y-6">
+                        <a href="mailto:superconhecimento7@gmail.com" class="group p-6 bg-white/10 backdrop-blur rounded-3xl border border-white/20 hover:bg-white/20 transition-all flex items-center gap-4 text-xl">
+                            <i data-lucide="mail" class="w-10 h-10 opacity-75 group-hover:opacity-100 transition-opacity p-3 bg-white/20 rounded-2xl"></i>
+                            <span class="font-semibold">superc...@gmail.com</span>
+                        </a>
+                        <a href="termos.html" class="group p-6 bg-white/10 backdrop-blur rounded-3xl border border-white/20 hover:bg-white/20 transition-all flex items-center gap-4 text-xl font-semibold">
+                            <i data-lucide="file-text" class="w-10 h-10 opacity-75 group-hover:opacity-100 transition-opacity p-3 bg-white/20 rounded-2xl"></i>
+                            <span>Termos de Uso (você está aqui)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 pt-16 mt-20 text-center">
+                <p class="text-xl text-gray-400 font-semibold mb-8">
+                    © 2025 Super Conhecimento. Plataforma educacional com 328 cursos certificados | CNPJ em processo
+                </p>
+                <div class="flex flex-wrap gap-8 justify-center text-lg text-gray-500">
+                    <a href="termos.html" class="hover:text-yellow-400 transition-all font-bold">Termos de Uso</a>
+                    <a href="#" class="hover:text-blue-400 transition-all font-bold">Política de Privacidade</a>
+                    <a href="cursos.html" class="hover:text-yellow-400 transition-all font-bold">Cursos</a>
+                    <span class="text-gray-600">•</span>
+                    <a href="index.html#oferta" class="hover:text-orange-400 transition-all font-bold">Começar Agora</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+        
+        // TOC dinâmico
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const tocNav = document.getElementById('toc-nav');
+            
+            sections.forEach(section => {
+                const li = document.createElement('li');
+                li.className = 'toc-item group';
+                li.innerHTML = `
+                    <a href="#${section.id}" class="flex items-center gap-3 text-xl font-semibold text-gray-700 hover:text-yellow-600 transition-all group-hover:pl-6 p-3 rounded-xl hover:bg-yellow-50 group-hover:shadow-md">
+                        <i data-lucide="chevron-right" class="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        ${section.querySelector('h2').textContent}
+                    </a>
+                `;
+                tocNav.appendChild(li);
+            });
+        });
+    </script>
+</body>
+
+</html>
+
