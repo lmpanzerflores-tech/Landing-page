@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os cursos</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="font-['Inter'] antialiased text-gray-800 bg-white">
+
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header class="fixed w-full top-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300"
+        id="header">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <img src="img/logo-super.png" alt="Super Conhecimento"
+                        class="h-12 w-auto transition-transform hover:scale-105">
+                </div>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#beneficios"
+                        class="text-gray-600 hover:text-yellow-400 transition-colors font-medium">Benefícios</a>
+                    <a href="#cursos"
+                        class="text-gray-600 hover:text-yellow-600 transition-colors font-medium">Cursos</a>
+                    <a href="#como-funciona"
+                        class="text-gray-600 hover:text-yellow-400 transition-colors font-medium">Como Funciona</a>
+                    <a href="#depoimentos"
+                        class="text-gray-600 hover:text-yellow-400 transition-colors font-medium">Depoimentos</a>
+                    <a href="#oferta"
+                        class="bg-yellow-400 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-yellow-700 transition-all hover:shadow-lg transform hover:-translate-y-0.5">
+                        Começar Agora
+                    </a>
+                </nav>
+
+                <!-- Botão Mobile -->
+                <button class="md:hidden p-2 text-gray-600 hover:text-yellow-400" id="mobile-menu-btn"
+                    aria-label="Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Menu Mobile -->
+            <div class="md:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg"
+                id="mobile-menu">
+                <div class="flex flex-col p-4 space-y-4">
+                    <a href="#beneficios"
+                        class="text-gray-600 hover:text-yellow-600 py-2 font-medium mobile-link">Benefícios</a>
+                    <a href="#cursos"
+                        class="text-gray-600 hover:text-yellow-600 py-2 font-medium mobile-link">Cursos</a>
+                    <a href="#como-funciona"
+                        class="text-gray-600 hover:text-yellow-600 py-2 font-medium mobile-link">Como
+                        Funciona</a>
+                    <a href="#depoimentos"
+                        class="text-gray-600 hover:text-yellow-600 py-2 font-medium mobile-link">Depoimentos</a>
+                    <a href="#oferta"
+                        class="bg-yellow-600 text-white px-6 py-3 rounded-full font-semibold text-center mobile-link">Começar
+                        Agora</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+
+            <h1 class="text-3xl font-bold text-center mb-10">
+                Todos os Cursos
+            </h1>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Repete seus cursos aqui -->
+
+                <div class="bg-white rounded-2xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Curso Exemplo</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Descrição do curso...
+                    </p>
+                    <button class="text-yellow-600 font-semibold">
+                        Ver detalhes
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
