@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
     initStickyCTA();
     initTestimonials();
+    initFAQ();
     initCursosPage();
 });
 
@@ -173,6 +174,24 @@ function initTestimonials() {
     render(currentIndex);
 }
 
+
+function initFAQ() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    if (!faqQuestions.length) return;
+
+    faqQuestions.forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.closest('.faq-item');
+            const answer = faqItem?.querySelector('.faq-answer');
+            if (!faqItem || !answer) return;
+
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', String(!isExpanded));
+            faqItem.classList.toggle('faq-open', !isExpanded);
+            answer.classList.toggle('hidden', isExpanded);
+        });
+    });
+}
 function handleCTA(location) {
     console.log(`CTA ${location} clicado`);
 
@@ -275,20 +294,32 @@ function renderCursos() {
         semResultados.classList.add('hidden');
 
         cursosPagina.forEach(curso => {
-            const card = document.createElement('div');
-            card.className = 'group bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-gray-100 overflow-hidden course-card';
+            const categoryStyle = getCourseCategoryStyle(curso.categoria);
+            const cardStyle = getCourseCardStyle(curso.categoria);
+            const rating = getCourseRating(curso.id);
+            const card = document.createElement('a');
+            card.href = curso.url;
+            card.target = '_blank';
+            card.rel = 'noopener noreferrer';
+            card.className = `course-card group bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 transition-all duration-500 hover:-translate-y-3 h-full ${cardStyle}`;
             card.innerHTML = `
-                <div class="relative mb-6">
-                    <img src="${curso.img}" alt="${curso.titulo}" class="w-full h-64 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                        ${curso.categoria}
+                <div class="h-56 overflow-hidden relative">
+                    <img src="${curso.img}" alt="${curso.titulo}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <span class="absolute top-4 left-4 px-4 py-2 ${categoryStyle} text-xs font-bold rounded-full shadow-lg">
+                        ${getCourseCategoryLabel(curso.categoria)}
+                    </span>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 leading-tight line-clamp-2">${curso.titulo}</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed line-clamp-3">${curso.descricao}</p>
+                    <div class="flex items-center gap-4 text-sm font-bold">
+                        <span class="text-yellow-600 flex items-center gap-1">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            ${rating.score}
+                        </span>
+                        <span class="text-gray-500">(${rating.reviews})</span>
                     </div>
                 </div>
-                <h3 class="font-black text-2xl text-gray-900 mb-4 leading-tight group-hover:text-yellow-600 transition-colors">${curso.titulo}</h3>
-                <p class="text-gray-600 mb-8 leading-relaxed">${curso.descricao}</p>
-                <a href="${curso.url}" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 shadow-xl hover:shadow-yellow-500/50 hover:-translate-y-1 transition-all group-hover:scale-[1.02] w-full">
-                    Ver detalhes <i data-lucide="arrow-right" class="w-6 h-6"></i>
-                </a>
             `;
             grid.appendChild(card);
         });
@@ -296,6 +327,54 @@ function renderCursos() {
         renderLucideIcons();
         updatePaginationControls(cursosFiltrados.length, totalPaginas);
     }, 250);
+}
+
+function getCourseCategoryStyle(categoria) {
+    const normalizedCategory = normalizeText(categoria);
+
+    if (normalizedCategory.includes('direito')) {
+        return 'bg-red-100/90 backdrop-blur text-red-800';
+    }
+
+    if (normalizedCategory.includes('desenvolvimento') || normalizedCategory.includes('auto ajuda')) {
+        return 'bg-blue-100/90 backdrop-blur text-blue-800';
+    }
+
+    return 'bg-yellow-100/90 backdrop-blur text-yellow-800';
+}
+
+function getCourseCardStyle(categoria) {
+    const normalizedCategory = normalizeText(categoria);
+
+    if (normalizedCategory.includes('direito')) {
+        return 'hover:shadow-2xl hover:shadow-red-200/50 hover:border-red-200';
+    }
+
+    if (normalizedCategory.includes('desenvolvimento') || normalizedCategory.includes('auto ajuda')) {
+        return 'hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-200';
+    }
+
+    return 'hover:shadow-2xl hover:shadow-yellow-200/50 hover:border-yellow-200';
+}
+
+function getCourseCategoryLabel(categoria) {
+    const normalizedCategory = normalizeText(categoria);
+
+    if (normalizedCategory.includes('direito')) {
+        return 'Direito';
+    }
+
+    if (normalizedCategory.includes('desenvolvimento') || normalizedCategory.includes('auto ajuda')) {
+        return 'Desenvolvimento';
+    }
+
+    return 'Administração';
+}
+
+function getCourseRating(courseId) {
+    const score = (4.8 + (courseId % 3) * 0.1).toFixed(1);
+    const reviews = `${(1.8 + (courseId % 5) * 0.6).toFixed(1)}k`;
+    return { score, reviews };
 }
 
 function updatePaginationControls(totalCursos, totalPaginas) {
