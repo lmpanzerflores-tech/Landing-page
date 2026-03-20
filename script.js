@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initSmoothScroll();
     initScrollAnimations();
     initHeaderScroll();
-    initFAQAccordion();
 });
 
 // ========================================
@@ -94,54 +93,7 @@ function initHeaderScroll() {
     });
 }
 
-// ========================================
-/** FAQ ACCORDION SIMPLIFICADO - BUG FREE */
-function initFAQAccordion() {
-    const faqButtons = document.querySelectorAll('.faq-btn');
-    
-    // Estado inicial: todos fechados
-    document.querySelectorAll('.faq-content').forEach(content => {
-        content.style.maxHeight = '0px';
-    });
 
-    faqButtons.forEach(button => {
-        button.addEventListener('click', () => toggleFAQ(button));
-    });
-}
-
-function toggleFAQ(button) {
-    const content = button.nextElementSibling;
-    const icon = button.querySelector('i');
-    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
-
-    // Fechar todos os outros
-    document.querySelectorAll('.faq-content').forEach(otherContent => {
-        if (otherContent !== content) {
-            otherContent.style.maxHeight = '0px';
-        }
-    });
-
-    document.querySelectorAll('.faq-btn').forEach(otherButton => {
-        if (otherButton !== button) {
-            otherButton.classList.remove('active');
-            const otherIcon = otherButton.querySelector('i');
-            if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
-        }
-    });
-
-    // Toggle atual
-    if (isOpen) {
-        content.style.maxHeight = '0px';
-        button.classList.remove('active');
-        if (icon) icon.style.transform = 'rotate(0deg)';
-    } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-        button.classList.add('active');
-        if (icon) icon.style.transform = 'rotate(180deg)';
-    }
-}
-
-// ========================================
 /** CTA HANDLER */
 function handleCTA(location) {
     console.log(`CTA ${location} clicado`);
@@ -340,7 +292,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initSmoothScroll();
     initScrollAnimations();
     initHeaderScroll();
-    initFAQAccordion();
     
     // NOVA: Inicializar cursos se página existir
     if (typeof initCursosPage === 'function' && document.getElementById('gridCursos')) {
