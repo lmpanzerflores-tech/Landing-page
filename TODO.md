@@ -1,27 +1,19 @@
-# TODO: Fix FAQ Click Functionality on index.html
+# TODO - Fix cursos.html Data Loading
 
-## Status: 🚀 In Progress
+## Plan Breakdown (Approved)
+- [ ] Step 1: Create this TODO.md
+- [ ] Step 2: Implement all course functions in script.js (initCursosPage, renderCursos, filtrarCursos, search handler, pagination, etc.)
+- [ ] Step 3: Test by refreshing cursos.html - verify courses appear, filters/search/pagination work
+- [ ] Step 4: Update TODO progress and attempt_completion
 
-### Step 1: ✅ Create TODO.md
-### Step 2: ✅ Add initFAQ() function and event listeners in script.js
-### Step 3: ✅ Enhance toggleFaq() with .active class toggle
-### Step 4: ✅ Call initFAQ() in DOMContentLoaded
-# ✅ **FAQ FULLY FIXED - All text visible!**
+```markdown
+# TODO - Fix cursos.html Data Loading
 
-**Final changes:**
-- script.js: +40px padding buffer, `overflow: visible`
-- style.css: `.faq-content[style*="max-height"] { overflow: visible !important; }`
+## Plan Breakdown (Approved)
+- [x] Step 1: Create this TODO.md
+- [x] Step 2: Implement all course functions in script.js 
+- [ ] Step 3: Test by refreshing cursos.html - verify courses appear, filters/search/pagination work
+- [ ] Step 4: Update TODO progress and attempt_completion
 
-**Perfect results:**
-- 100% text shown (no clipping)
-- Smooth 0.4s animation
-- Accordion + icons + underlines
-
-Tested: `start index.html` confirms **all FAQ content visible** 🎉
-
-**Task complete!**
-
-**Goal**: Make FAQ buttons clickable to show/hide answers with smooth animations (accordion style).
-
-**Files**: script.js (only)
-
+**Current Progress:** Step 2 complete. Refresh cursos.html to test. ✅
+```

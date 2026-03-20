@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Completo - Super Conhecimento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-['Inter'] antialiased text-gray-800 bg-white">
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html">
+                    <img src="img/logo-super.png" alt="Super Conhecimento" class="h-12">
+                </a>
+                <a href="index.html#oferta" class="bg-yellow-400 text-white px-8 py-3 rounded-full font-bold hover:bg-yellow-500">Começar Agora</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-black text-gray-900 mb-4">Todos os Cursos</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">19 cursos disponíveis em 3 categorias</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12" id="gridCursos">
+                <!-- Cursos aqui -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Dados inline (sem dependências)
+        const cursosData = [
+            {id:1,titulo:'Carreira, Remuneração e Avaliação de Desempenho',categoria:'Administração e Negócios',img:'img/capas/logo-carreiraremuneracaoeavaliacaodedesempenho.png',descricao:'Gestão empresarial avançada para RH e líderes',url:'https://go.hotmart.com/T101687724I'},
+            {id:2,titulo:'CompraNet',categoria:'Administração e Negócios',img:'img/capas/logo-compranet.png',descricao:'Sistema de compras públicas',url:'https://go.hotmart.com/Q101742690O'},
+            {id:3,titulo:'Cultura e Clima Organizacional',categoria:'Administração e Negócios',img:'img/capas/logo-culturaeclimaorganizacional.png',descricao:'Ambientes organizacionais saudáveis',url:'https://go.hotmart.com/Q101743317O'},
+            // ... 16 outros cursos do data-cursos.js (abreviado para exemplo)
+        ];
+
+        // Renderizar cursos
+        function renderCursos() {
+            const grid = document.getElementById('gridCursos');
+            grid.innerHTML = '';
+            cursosData.forEach(curso => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all border';
+                card.innerHTML = `
+                    <img src="${curso.img}" alt="${curso.titulo}" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-xl mb-2">${curso.titulo}</h3>
+                    <p class="text-gray-600 mb-4">${curso.descricao}</p>
+                    <a href="${curso.url}" class="text-yellow-600 font-bold flex items-center gap-2 hover:text-yellow-700">
+                        Ver detalhes <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                `;
+                grid.appendChild(card);
+            });
+            lucide.createIcons();
+        }
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', renderCursos);
+    </script>
+</body>
+</html>
