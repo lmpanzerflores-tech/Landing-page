@@ -155,12 +155,11 @@ html {
 .faq-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: all 0.4s ease-out;
 }
 
-.faq-content.active {
-    max-height: 500px;
-    /* Altura máxima para animação */
+.faq-content[style*="max-height"] {
+    overflow: visible !important;
 }
 
 /* Rotação do ícone no FAQ */

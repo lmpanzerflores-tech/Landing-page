@@ -30,7 +30,7 @@ const cursosData = [
     categoria: 'Administração e Negócios',
     img: 'img/capas/logo-custodeprecodevendas.jpeg',
     descricao: 'Aprenda a calcular custos e definir preços estratégicos para maximizar lucros.',
-    url: '#'
+    url: 'https://go.hotmart.com/S101743883X'
   },
   {
     id: 5,
@@ -38,7 +38,7 @@ const cursosData = [
     categoria: 'Administração e Negócios',
     img: 'img/capas/logo-desenvolvimentoetreinamento.jpeg',
     descricao: 'Crie programas de capacitação eficientes para desenvolver talentos dentro da empresa.',
-    url: '#'
+    url: 'https://go.hotmart.com/K101745609C'
   },
   {
     id: 6,
@@ -46,7 +46,7 @@ const cursosData = [
     categoria: 'Administração e Negócios',
     img: 'img/capas/logo-empreendedorismo.jpeg',
     descricao: 'Aprenda a criar, estruturar e expandir seu próprio negócio com estratégias práticas.',
-    url: '#'
+    url: 'https://go.hotmart.com/K101745609C'
   },
   {
     id: 7,
@@ -54,7 +54,7 @@ const cursosData = [
     categoria: 'Administração e Negócios',
     img: 'img/capas/logo-gestaodeestoque.png',
     descricao: 'Controle e otimize estoques, evitando perdas e melhorando a eficiência operacional.',
-    url: '#'
+    url: 'https://go.hotmart.com/I101745975C'
   },
   {
     id: 8,
@@ -62,7 +62,7 @@ const cursosData = [
     categoria: 'Administração e Negócios',
     img: 'img/capas/logo-gestaofinanceira.png',
     descricao: 'Controle finanças, fluxo de caixa e investimentos para garantir a saúde do negócio.',
-    url: '#'
+    url: 'https://go.hotmart.com/U101747065L'
   },
   {
     id: 9,
@@ -70,7 +70,7 @@ const cursosData = [
     categoria: 'Administração e Negócios',
     img: 'img/capas/logo-gestaoeconomica.png',
     descricao: 'Entenda conceitos econômicos aplicados à gestão empresarial e tomada de decisões.',
-    url: '#'
+    url: 'https://go.hotmart.com/K101746770W'
   },
   {
     id: 10,
@@ -78,7 +78,7 @@ const cursosData = [
     categoria: 'Direito',
     img: 'img/capas/logo-LGPD.png',
     descricao: 'Aprenda a Lei Geral de Proteção de Dados e como aplicá-la na sua empresa.',
-    url: '#'
+    url: 'https://go.hotmart.com/W101759023C'
   },
   {
     id: 11,
@@ -86,7 +86,7 @@ const cursosData = [
     categoria: 'Direito',
     img: 'img/capas/logo-licitacaonapratica.png',
     descricao: 'Domine processos licitatórios e participe de contratos públicos com segurança.',
-    url: '#'
+    url: 'https://go.hotmart.com/W101759252L'
   },
   {
     id: 12,
@@ -94,7 +94,7 @@ const cursosData = [
     categoria: 'Direito',
     img: 'img/capas/logo-nocoesdedireitotributario.png',
     descricao: 'Entenda os principais impostos e obrigações fiscais no Brasil.',
-    url: '#'
+    url: 'https://go.hotmart.com/Y101761450H'
   },
   {
     id: 13,
@@ -102,7 +102,7 @@ const cursosData = [
     categoria: 'Auto Ajuda e Desenvolvimento Humano',
     img: 'img/capas/logo-gestaodetempo.png',
     descricao: 'Organize tarefas e aumente sua produtividade com técnicas modernas de gestão de tempo.',
-    url: '#'
+    url: 'https://go.hotmart.com/U101746365G'
   },
   {
     id: 14,
@@ -110,7 +110,7 @@ const cursosData = [
     categoria: 'Auto Ajuda e Desenvolvimento Humano',
     img: 'img/capas/logo-liderancainspiradora.png',
     descricao: 'Desenvolva habilidades para liderar equipes com motivação e alta performance.',
-    url: '#'
+    url: 'https://go.hotmart.com/S101760239B'
   },
   {
     id: 15,
@@ -118,7 +118,7 @@ const cursosData = [
     categoria: 'Auto Ajuda e Desenvolvimento Humano',
     img: 'img/capas/logo-objetivosmetasefocos.png',
     descricao: 'Defina metas claras e mantenha o foco para alcançar resultados consistentes.',
-    url: '#'
+    url: 'https://go.hotmart.com/F101762203N'
   },
   {
     id: 16,
@@ -126,7 +126,7 @@ const cursosData = [
     categoria: 'Auto Ajuda e Desenvolvimento Humano',
     img: 'img/capas/logo-proatividadeeprotagonismo.png',
     descricao: 'Desenvolva atitude proativa e assuma o controle da sua carreira e resultados.',
-    url: '#'
+    url: 'https://go.hotmart.com/U101762952H'
   },
   {
     id: 17,
@@ -134,7 +134,7 @@ const cursosData = [
     categoria: 'Administração e Negócios',
     img: 'img/capas/logo-processodecisorio.png',
     descricao: 'Aprenda técnicas para tomar decisões estratégicas com mais segurança e eficiência.',
-    url: '#'
+    url: 'https://go.hotmart.com/H101763090X'
   },
   {
     id: 18,
@@ -142,7 +142,15 @@ const cursosData = [
     categoria: 'Administração e Negócios',
     img: 'img/capas/logo-recrutamentoesecao.png',
     descricao: 'Atraia, selecione e contrate os melhores talentos para sua empresa.',
-    url: '#'
+    url: 'https://go.hotmart.com/K101802668B'
+  },
+  {
+    id: 19,
+    titulo: 'Maquina de Vendas',
+    categoria: 'Administração e Negócios',
+    img: 'img/capas/logo-maquinadevendas.png',
+    descricao: 'Melhore sua técnica de vendas e aprimore seu negócio.',
+    url: 'https://go.hotmart.com/H87487330E'
   }
 ];
 
