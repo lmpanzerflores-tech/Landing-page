@@ -131,6 +131,18 @@ html {
     line-height: 1;
 }
 
+.depoimentos-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.depoimentos-track {
+    display: flex;
+    align-items: stretch;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
 /* FAQ estático - sempre visível */
 .faq-item {
     transition: var(--transition-smooth);
@@ -247,12 +259,13 @@ html {
 }
 
 .depo-card {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    flex: 0 0 100%;
+    min-width: 100%;
     width: 100%;
-    opacity: 0;
-    transform: scale(0.95);
+    max-width: 100%;
+    opacity: 0.55;
+    transform: scale(0.96);
     transition: opacity 0.5s ease, transform 0.5s ease;
     pointer-events: none;
 }
@@ -260,7 +273,6 @@ html {
 .depo-card.active {
     opacity: 1;
     transform: scale(1);
-    position: relative;
     z-index: 1;
     pointer-events: auto;
 }
@@ -272,6 +284,12 @@ html {
 .depo-dot.active {
     background-color: #facc15;
     transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .depo-card {
+        max-width: 100%;
+    }
 }
 
 /* ========================================

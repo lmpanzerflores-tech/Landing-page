@@ -124,17 +124,20 @@ function initStickyCTA() {
 }
 
 function initTestimonials() {
+    const track = document.getElementById('depoimentos-main');
     const cards = Array.from(document.querySelectorAll('.depo-card'));
     const dots = Array.from(document.querySelectorAll('.depo-dot'));
     const prevButton = document.getElementById('prev-depo');
     const nextButton = document.getElementById('next-depo');
 
-    if (cards.length <= 1) return;
+    if (!track || cards.length <= 1) return;
 
     let currentIndex = cards.findIndex(card => card.classList.contains('active'));
     if (currentIndex === -1) currentIndex = 0;
 
     const render = index => {
+        track.style.transform = `translateX(-${index * 100}%)`;
+
         cards.forEach((card, cardIndex) => {
             const isActive = cardIndex === index;
             card.classList.toggle('active', isActive);
