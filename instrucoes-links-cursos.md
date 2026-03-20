@@ -1,13 +1,11 @@
-# Como Adicionar Links de Vendas nos Cursos (FÁCIL)
+# Como atualizar os links dos cursos
 
-## 1. Abra data-cursos.js
-```
-c:/Users/Be Studios/Landing-page/data-cursos.js
-```
+1. Abra [data-cursos.js](C:/Users/Be%20Studios/Landing-page/data-cursos.js).
+2. Localize o objeto do curso desejado.
+3. Atualize a propriedade `url` com o link de venda correspondente.
 
-## 2. Encontre seu curso e substitua `url: '#'` pela URL de vendas
+Exemplo:
 
-**ANTES:**
 ```js
 {
   id: 4,
@@ -15,31 +13,8 @@ c:/Users/Be Studios/Landing-page/data-cursos.js
   categoria: 'Administração e Negócios',
   img: 'img/capas/logo-custodeprecodevendas.jpeg',
   descricao: 'Aprenda a calcular custos...',
-  url: '#'  ← MUDE AQUI
-},
+  url: 'https://seu-link-de-venda.com'
+}
 ```
 
-**DEPOIS:**
-```js
-{
-  id: 4,
-  titulo: 'Custos e Formação de Preço de Vendas',
-  categoria: 'Administração e Negócios',
-  img: 'img/capas/logo-custodeprecodevendas.jpeg',
-  descricao: 'Aprenda a calcular custos...',
-  url: 'https://SEU-LINK-HOTMART.com'  ← LINK DA VENDA
-},
-```
-
-## 3. Salve e teste
-- Abra `cursos.html`
-- Clique "Ver detalhes →" no curso
-- Vai para página de vendas!
-
-## ✅ Cursos já com link:
-- Carreira... → Hotmart
-- LGPD → Hotmart  
-- CompraNet → Hotmart
-
-**18 cursos prontos! Adicione só o `url:` de cada um.**
-
+Após salvar, abra [cursos.html](C:/Users/Be%20Studios/Landing-page/cursos.html) e teste o botão `Ver detalhes`.

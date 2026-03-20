@@ -146,7 +146,7 @@ const cursosData = [
   },
   {
     id: 19,
-    titulo: 'Maquina de Vendas',
+    titulo: 'Máquina de Vendas',
     categoria: 'Administração e Negócios',
     img: 'img/capas/logo-maquinadevendas.png',
     descricao: 'Melhore sua técnica de vendas e aprimore seu negócio.',
